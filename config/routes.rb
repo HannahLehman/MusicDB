@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  # Always set custom routes ABOVE resources.
+  root to: 'artists#index'
+
+  resources :songs
+
+  resources :artists
+
+  resources :genres
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
